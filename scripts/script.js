@@ -11,7 +11,7 @@ const alphabet = alpha.map((x) => String.fromCharCode(x));
 console.log(alphabet);
 
 for ([i, letter] of Object.entries(alphabet)) {
-    btnContainer.innerHTML += `<button type="button" id="alph-btn" class="btn${i} col-lg-1 mx-2 my-3 col-md-4 btn btn-secondary fs-4" style= "width: 10%">${letter}</button>`
+    btnContainer.innerHTML += `<button type="button" id="btn${i}" class="alph-btn col-lg-1 mx-2 my-3 col-md-4 btn btn-secondary fs-4" style= "width: 10%">${letter}</button>`
 }
 
 
