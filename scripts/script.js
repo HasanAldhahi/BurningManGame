@@ -28,6 +28,7 @@ function getData() {
         .then(randomWord => {
             return randomWord[0].split('');
 
+
         })
 }
 
