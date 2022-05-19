@@ -76,7 +76,7 @@ header .overlay {
 
 /* fire flames button effect */
 
- #alph-btn {
+ button[name] {
 	 position: relative;
 	
 	 width: 200px;
@@ -84,10 +84,10 @@ header .overlay {
 	 /* background: rgb(228, 41, 41); */
 	 border-radius: 999px;
 }
-#alph-btn:hover {
+button[name]:hover {
 	 animation: burn 1000ms ease-out forwards;
 }
- #alph-btn:hover::before {
+button[name]:hover::before {
 	 content: '';
 	 position: absolute;
 	 left: 40px;
@@ -97,7 +97,7 @@ header .overlay {
 	 border-radius: 100%;
 	 animation: flare 300ms ease-out forwards;
 }
- #alph-btn:hover::after {
+button[name]:hover::after {
 	 content: '';
 	 position: absolute;
 	 right: 40px;
