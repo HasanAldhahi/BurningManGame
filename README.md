@@ -4,7 +4,7 @@
 
 If this is the first time you hear of Hangman, I suggest you read this [article](https://en.wikipedia.org/wiki/Hangman_(game)) and watch this [video](https://www.youtube.com/watch?v=leW9ZotUVYo).
 
-Instead of having another player suggest the game, we will automate this by using an API as you can see in the requirements section. Example of what we want to accomplish [here](https://codepen.io/cathydutton/pen/ldazc). You can use it to know exactly what the game is about, but do not copy it. Use your own way. Be as creative as you can!
+Instead of having another player suggest the game, we will automate this by using an API as you can see in the requirements section. Example of what we want to accomplish [here](https://cod5epen.io/cathydutton/pen/ldazc). You can use it to know exactly what the game is about, but do not copy it. Use your own way. Be as creative as you can!
 
 ![Example of hangman game](images/example.jpg)
 
