@@ -3,9 +3,9 @@
 
 
 
+var guess ;
+var geusses = [ ];
 const btnContainer = document.getElementById("btn-container");
-
-
 const alpha = Array.from(Array(26)).map((e, i) => i + 65);
 const alphabet = alpha.map((x) => String.fromCharCode(x));
 for ([i, letter] of Object.entries(alphabet)) {
@@ -47,3 +47,27 @@ var word = []
     })
 }
 
+result = function () {
+    wordHolder = document.getElementsByClassName('preview')[0];
+    correct = document.createElement('ul');
+
+    for (var i = 0; i < word.length; i++) {
+      correct.setAttribute('id', 'my-word');
+
+      guess = document.createElement('li');
+      guess.setAttribute('class', 'guess');
+
+
+        guess.innerHTML = "_";
+    
+
+      geusses.push(guess);
+      wordHolder.appendChild(correct);
+      correct.appendChild(guess);
+    }
+  }
+  async function startGame() {
+    const loadWord = await fetchWord()
+    await result()
+}
+startGame()
