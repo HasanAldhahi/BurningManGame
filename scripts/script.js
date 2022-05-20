@@ -6,10 +6,13 @@ const btnHint = document.getElementById("btn-hint")
 const letters = document.getElementsByName("btns");
 const portrait = document.getElementById("portrait");
 const btnRefresh = document.getElementById("refresh");
+const overlayGame = document.getElementById("text")
+const overlay = document.getElementById("overlay")
+const bigContainer = document.getElementById("big-container")
 
 //set the default image
 
-portrait.innerHTML = `<img src="./images/default.jpg" alt="" class="container border" style="height: 45vh; width: fit-content;">`
+portrait.innerHTML = `<img src="./images/default.jpg" alt="" class="m-auto" style="height: fit-content ; width: 40%;">`
 
 
 const btnContainer = document.getElementById("btn-container");
@@ -58,7 +61,7 @@ result = function () {
         correct.setAttribute('id', 'my-word');
 
         guess = document.createElement('li');
-        guess.setAttribute('class', 'guess');
+        guess.setAttribute('class', 'guess col-sm-1 col-md-1 col-lg-2 col-xl-1');
 
 
         guess.innerHTML = "_";
@@ -108,11 +111,20 @@ const comments = () => {
 
     let winCount = 0;
     livesCounter = document.getElementById("lives");
-    livesCounter.innerHTML = "Lives Remaining: " + lives;
+    if (lives >= 0) {
+        livesCounter.innerHTML = "Lives Remaining: " + lives;
+    }
+
     if (lives < 1) {
-        livesCounter.innerHTML = "Game Over";
+        console.log("worked")
+        on()
+        overlayGame.innerHTML = "Game Over 🔥";
+
+
+
     }
     else {
+
         for (let i = 0; i < guessTable.length; i++) {
 
             if (guessTable[i].innerHTML === "_") {
@@ -121,7 +133,7 @@ const comments = () => {
             else winCount++
         }
         if (winCount === guessTable.length) {
-            livesCounter.innerHTML = "You Win!";
+            overlayGame.innerHTML = "You Win! 🙃 ";
         }
     }
 }
@@ -134,10 +146,19 @@ async function startGame() {
 
 
 function updateImage() {
-    portrait.innerHTML = `<img src="./images/${lives}.jpg" alt="" class="container border" style="height: 45vh; width: fit-content;">`
+    portrait.innerHTML = `<img src="./images/${lives}.jpg" alt="" class="" style="height: 45vh; width: fit-content;">`
 }
 
+function on() {
 
+    overlay.style.display = "block";
+    bigContainer.style.display = "none";
+}
+
+function off() {
+    overlay.style.display = "none";
+    bigContainer.style.display = "block";
+}
 
 
 
